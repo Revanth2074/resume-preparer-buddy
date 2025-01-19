@@ -39,9 +39,36 @@
 }
 
 .section-title {
-  @apply text-xl font-semibold mb-4 text-slate-800 border-b pb-2;
+  @apply text-xl font-semibold mb-4 text-slate-800 border-b pb-2 transition-all duration-300 hover:text-primary hover:border-primary;
 }
 
 .hover-scale {
-  @apply transition-transform duration-200 hover:scale-105;
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg rounded-lg p-2;
+}
+
+.contact-link {
+  @apply transition-all duration-300 hover:text-primary hover:translate-x-1;
+}
+
+.skill-badge {
+  @apply transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white;
+}
+
+.project-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px];
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
 }

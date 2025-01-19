@@ -16,14 +16,18 @@ const Projects = () => {
   ];
 
   return (
-    <section className="mb-8">
+    <section className="mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
       <h2 className="section-title flex items-center gap-2">
         <FolderGit2 className="w-5 h-5" />
         PERSONAL PROJECTS
       </h2>
       <div className="grid gap-4">
-        {projects.map((project) => (
-          <Card key={project.title} className="hover-scale">
+        {projects.map((project, index) => (
+          <Card 
+            key={project.title} 
+            className="project-card cursor-pointer"
+            style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+          >
             <CardHeader>
               <div className="flex justify-between items-start">
                 <CardTitle className="text-base">{project.title}</CardTitle>
