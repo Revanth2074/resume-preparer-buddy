@@ -8,9 +8,9 @@ import Interests from "@/components/Interests";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div className="min-h-screen resume-container">
       <div className="container max-w-4xl mx-auto py-8 px-4">
-        <div className="bg-white shadow-lg rounded-lg p-8">
+        <div className="bg-white/80 shadow-lg rounded-lg p-8 backdrop-blur-md resume-content">
           <Header />
           <Education />
           <Skills />
